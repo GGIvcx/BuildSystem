@@ -1,5 +1,8 @@
 # What does the Plugin do?
 This simple plugin is designed to manage builders and visitors on your build server. At its core, it gives builders and admins creativemode, while other visitors are immediately placed in spectatormode to protect the builds.\
+# Supportet Versions
+- Spigot 1.21.1
+
 ## Features
 - Adds a simple vanish for staffmembers
 - Adds a Scoreboard.
