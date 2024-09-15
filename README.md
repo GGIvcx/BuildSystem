@@ -1,3 +1,4 @@
+![Title](https://cdn.modrinth.com/data/cached_images/bc5ecaf1f0f0826863a766f9c8e595709e5f10f9.png)
 # What does the Plugin do?
 This simple plugin is designed to manage builders and visitors on your build server. At its core, it gives builders and admins creativemode, while other visitors are immediately placed in spectatormode to protect the builds.\
 # Supportet Versions
