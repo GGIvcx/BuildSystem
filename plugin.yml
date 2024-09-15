@@ -1,0 +1,22 @@
+name: BuildSystem
+prefix: BuildSystem
+author: Ivcx
+version: 1.0
+main: de.herobukkit.buildsystem.all.Main
+commands:
+     Build:
+          description: Benutze /Build
+     ?:
+          description: Help
+     hilfe:
+          description: Help
+     help:
+          description: Help
+     hide:
+          description: Hide | build.hide
+     show:
+          description: Show | build.show
+     jumpto:
+          description: JumpTo | build.team
+     sb:
+          description: Toggle the Scoreboard | build.team
