@@ -20,20 +20,20 @@ public class CMDjumpto implements CommandExecutor{
 					if (Bukkit.getPlayer(Name) != null){
 						Player target = (Player)Bukkit.getPlayer(Name);
 						player.teleport(target);
-						player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §eYou where warped to §6" + target.getName());
+						player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§eYou where warped to Â§6" + target.getName());
 						return true;
 					} else {
 						
 					}
 					
 				} else {
-					player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cTo many or to little argument!");
+					player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cTo many or to little argument!");
                     return false;
 				}
 				
 				
 			} else {
-				player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cInsufficiend permissions!");
+				player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cInsufficiend permissions!");
 			}
 			}
 		}

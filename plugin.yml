@@ -1,11 +1,11 @@
 name: BuildSystem
 prefix: BuildSystem
 author: Ivcx
-version: 1.1
+version: 253.1
 main: de.herobukkit.buildsystem.all.Main
 commands:
      Build:
-          description: Benutze /Build
+          description: Use /Build | build.team
      ?:
           description: Help
      hilfe:
@@ -20,3 +20,7 @@ commands:
           description: JumpTo | build.team
      sb:
           description: Toggle the Scoreboard | build.team
+     vanish:
+          description: vanish | build.team
+     spec:
+          description: Switch to Spectator mode | build.team

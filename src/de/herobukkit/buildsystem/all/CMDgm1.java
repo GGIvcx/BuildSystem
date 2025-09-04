@@ -22,14 +22,14 @@ public class CMDgm1  implements CommandExecutor{
 						//for (Player all : Bukkit.getOnlinePlayers()) {
 						//	ScoreboardClass.sendScoreboard(all);
 						//}
-						p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7Now you can §eBuild");
+						p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7Now you can Â§eBuild");
 						p.setGameMode(GameMode.CREATIVE);
 						} else {
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7Use §e/build");
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7Use Â§e/build");
 						}
 					
 				} else {
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cInsufficient permissions!");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cInsufficient permissions!");
 				}
 				
 			}

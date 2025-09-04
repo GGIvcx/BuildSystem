@@ -25,28 +25,33 @@ public class Events implements Listener {
 		Player p = e.getPlayer();
 		if (p.hasPermission("build.admin")){
 			p.setGameMode(GameMode.CREATIVE);
-			p.setPlayerListName("ง4Admin ง8ป ง7" + p.getName());
-			p.sendTitle("ง6Welcome","ง4Administrator ง7" + p.getName());
-			e.setJoinMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Administrator ง4" + p.getName() + " ง7joined the game");
+			p.setPlayerListName("ยง4Admin ยง8ยง ยง7" + p.getName());
+			p.sendTitle("ยง6Welcome","ยง4Administrator ยง7" + p.getName());
+			e.setJoinMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Administrator ยง4" + p.getName() + " ยง7joined the game");
 		} else if (p.hasPermission("build.team")){
 			//for (Player all : Bukkit.getOnlinePlayers()) {
 			//	ScoreboardClass.sendScoreboard(all);
 			//}
-			p.setPlayerListName("งeBuilder ง8ป ง7" + p.getName());
+			p.setPlayerListName("ยงeBuilder ยง8ยง ยง7" + p.getName());
 			p.setGameMode(GameMode.CREATIVE);
-			e.setJoinMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Builder งe" + p.getName() + " ง7joined the game");
-			p.sendTitle("ง6Welcome","งeBuilder ง7" + p.getName());			
+			e.setJoinMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Builder ยงe" + p.getName() + " ยง7joined the game");
+			p.sendTitle("ยง6Welcome","ยงeBuilder ยง7" + p.getName());			
 		} else {
 			//for (Player all : Bukkit.getOnlinePlayers()) {
 			//	ScoreboardClass.sendScoreboard(all);
 			//}
 			p.setGameMode(GameMode.SPECTATOR);
-			p.setPlayerListName("ง7Spec ง8ป ง7" + p.getName());
-			e.setJoinMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Visitor ง8" + p.getName() + " ง7joined the game");
-			p.sendTitle("ง6Welcome","ง7" + p.getName());
+			p.setPlayerListName("ยง7Spec ยง8ยง ยง7" + p.getName());
+			e.setJoinMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Visitor ยง8" + p.getName() + " ยง7joined the game");
+			p.sendTitle("ยง6Welcome","ยง7" + p.getName());
 		}
 		//Push scoreboard on join
 		ScoreboardClass.sendScoreboard(p);
+		
+		//hide vanish players
+		for (Player vanish : Main.vanish) {
+			p.hidePlayer(vanish);
+		}
 		
 		//for (Player all : Bukkit.getOnlinePlayers()) {
 		//	ScoreboardClass.sendScoreboard(all);
@@ -60,11 +65,11 @@ public class Events implements Listener {
 		//}
 		Player p = e.getPlayer();
 		if (p.hasPermission("build.admin")){
-			e.setQuitMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Administrator ง4" + p.getName() + " ง7left the game");
+			e.setQuitMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Administrator ยง4" + p.getName() + " ยง7left the game");
 		} else if (p.hasPermission("build.team")){
-			e.setQuitMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Builder งe" + p.getName() + " ง7left the game");
+			e.setQuitMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Builder ยงe" + p.getName() + " ยง7left the game");
 		} else {
-			e.setQuitMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Visitor ง8" + p.getName() + " ง7left the game");
+			e.setQuitMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Visitor ยง8" + p.getName() + " ยง7left the game");
 			}
 		}
 	@EventHandler(priority = EventPriority.NORMAL)
@@ -74,7 +79,7 @@ public class Events implements Listener {
     		String msg = event.getMessage().split(" ")[0];
     		HelpTopic topic = Bukkit.getServer().getHelpMap().getHelpTopic(msg);
     		if (topic == null) {
-    			p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Unknown command");
+    			p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Unknown command");
     			event.setCancelled(true);
     		}
     	}

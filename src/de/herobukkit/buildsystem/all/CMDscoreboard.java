@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
 import net.md_5.bungee.api.ChatColor;
@@ -20,22 +21,32 @@ public class CMDscoreboard implements CommandExecutor{
 			if(player.hasPermission("build.team")){
 				if(args.length == 1){
 					if (args[0].equalsIgnoreCase("on")) {
-						ScoreboardClass.sendScoreboard(player);
-						player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7The Scoreboard was §aenabled §7for you!");
+						FileConfiguration config = Main.getInstance().getConfig();
+						config.set("Buildsystem.Toggle.Scoreboard", true);
+						Main.getInstance().saveConfig();
+						for (Player all : Bukkit.getOnlinePlayers()) {
+							ScoreboardClass.sendScoreboard(all);
+						}
+						player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7The Scoreboard was Â§aenabledÂ§7!");
 					} else if (args[0].equalsIgnoreCase("off")) {
-						player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7The Scoreboard was §cdisabled §7for you!");
-						player.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+						FileConfiguration config = Main.getInstance().getConfig();
+						config.set("Buildsystem.Toggle.Scoreboard", false);
+						Main.getInstance().saveConfig();
+						for (Player all : Bukkit.getOnlinePlayers()) {
+							all.setScoreboard(Bukkit.getScoreboardManager().getNewScoreboard());
+						}
+						player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7The Scoreboard was Â§cdisabledÂ§7!");
 						
 					} else {
-						player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7Please use §9/sb <On/Off>§7!");
+						player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7Please use Â§9/sb <On/Off>Â§7!");
 					}
 					
 					
 				} else {
-					player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7Please use §9/sb <On/Off>§7!");
+					player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7Please use Â§9/sb <On/Off>Â§7!");
 				}
 			} else {
-				player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cInsufficient permissions!");
+				player.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cInsufficient permissions!");
 			}
 			
 		}

@@ -20,8 +20,8 @@ public class CMDhide implements CommandExecutor{
 				if(p.hasPermission("build.team")){
 					if(args.length == 0) {
 						if (p.hasPermission("build.admin")) {
-						p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7You are now §3vanished");
-						p.setPlayerListName("§4Admin §8» §7" + p.getName() + " §8| §9V");
+						p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7You are now Â§3vanished");
+						p.setPlayerListName("Â§4Admin Â§8Â§ Â§7" + p.getName() + " Â§8| Â§9V");
 						for (Player all : Bukkit.getOnlinePlayers()) {
 							all.hidePlayer(p);
 							if(all.hasPermission("build.team")) {
@@ -29,8 +29,8 @@ public class CMDhide implements CommandExecutor{
 							}
 						}
 						} else if(p.hasPermission("build.team")) {
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7You are now §3vanished");
-							p.setPlayerListName("§eBuilder §8» §7" + p.getName() + " §8| §9V");
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7You are now Â§3vanished");
+							p.setPlayerListName("Â§eBuilder Â§8Â§ Â§7" + p.getName() + " Â§8| Â§9V");
 							for (Player all : Bukkit.getOnlinePlayers()) {
 								all.hidePlayer(p);
 								if(all.hasPermission("build.team")) {
@@ -45,7 +45,7 @@ public class CMDhide implements CommandExecutor{
 							
 							if(target.hasPermission("build.admin")) {
 								
-								target.setPlayerListName("§4Admin §8» §7" + target.getName() + " §8| §9V");
+								target.setPlayerListName("Â§4Admin Â§8Â§ Â§7" + target.getName() + " Â§8| Â§9V");
 								for (Player all : Bukkit.getOnlinePlayers()) {
 									all.hidePlayer(target);
 									if(all.hasPermission("build.team")) {
@@ -53,9 +53,9 @@ public class CMDhide implements CommandExecutor{
 									}
 									
 								}
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7The Player §e" + target.getName() + " §7is §3vanished §7now");
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7The Player Â§e" + target.getName() + " Â§7is Â§3vanished Â§7now");
 						} else if(target.hasPermission("build.team")) {
-							target.setPlayerListName("§eBuilder §8» §7" + target.getName() + " §8| §9V");
+							target.setPlayerListName("Â§eBuilder Â§8Â§ Â§7" + target.getName() + " Â§8| Â§9V");
 							for (Player all : Bukkit.getOnlinePlayers()) {
 								all.hidePlayer(target);
 								if(all.hasPermission("build.team")) {
@@ -65,7 +65,7 @@ public class CMDhide implements CommandExecutor{
 							}
 							
 						} else {
-							target.setPlayerListName("§7Spec §8» §7" + target.getName() + " §8| §9V");
+							target.setPlayerListName("Â§7Spec Â§8Â§ Â§7" + target.getName() + " Â§8| Â§9V");
 							for (Player all : Bukkit.getOnlinePlayers()) {
 								all.hidePlayer(target);
 								if(all.hasPermission("build.team")) {
@@ -75,14 +75,14 @@ public class CMDhide implements CommandExecutor{
 							}
 						}
 						} else
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cThe Player §e" + args[0] + " §ccould not be found");
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cThe Player Â§e" + args[0] + " Â§ccould not be found");
 						} else
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cInsufficiend permissions!");
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cInsufficiend permissions!");
 					} else
-						p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7Use §9/hide <Player>§7!");
+						p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7Use Â§9/hide <Player>Â§7!");
 					
 				} else {
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cInsufficiend permissions!");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cInsufficiend permissions!");
 				}
 				
 			}
@@ -93,5 +93,4 @@ public class CMDhide implements CommandExecutor{
 		
 	}
 	
-
 }

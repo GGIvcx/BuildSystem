@@ -22,19 +22,26 @@ public class ScoreboardClass {
 		objective.setDisplaySlot(DisplaySlot.SIDEBAR);
 		objective.setDisplayName(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.ServerName")));
 		objective.getScore("         ").setScore(16);
-		objective.getScore("§7Status:").setScore(15);
+		objective.getScore("Â§7Status:").setScore(15);
 		if(player.hasPermission("build.admin")) {
-			objective.getScore("§8 » §4Administrator").setScore(14);
+			objective.getScore("Â§8 Â§ " + ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.Admin"))).setScore(14);
 		} else if(player.hasPermission("build.team")) {
-			objective.getScore("§8 » §eBuilder").setScore(14);
+			objective.getScore("Â§8 Â§ " + ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.Builder"))).setScore(14);
 		} else {
-			objective.getScore("§8 » §aVisitor").setScore(14);
+			objective.getScore("Â§8 Â§ " + ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.Visitor"))).setScore(14);
 		}
 		objective.getScore("     ").setScore(12);
-		objective.getScore("§7Name:").setScore(11);
-		objective.getScore("§8 » §e" + player.getName()).setScore(10);
+		objective.getScore("Â§7Name:").setScore(11);
+		objective.getScore("Â§8 Â§ Â§e" + player.getName()).setScore(10);
 		objective.getScore("        ").setScore(9);
-		player.setScoreboard(board);
+		
+		if (Main.getInstance().getConfig().getBoolean("Buildsystem.Toggle.Scoreboard") == true) {
+			player.setScoreboard(board);
+			System.out.println("[BuildSystem] Scoreboard is enabled");
+		} else if (Main.getInstance().getConfig().getBoolean("Buildsystem.Toggle.Scoreboard") == false) {
+			System.out.println("[BuildSystem] Scoreboard is disabled");
+		}
+		
 	}
 	
 	

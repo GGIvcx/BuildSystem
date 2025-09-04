@@ -1,6 +1,8 @@
 package de.herobukkit.buildsystem.all;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Effect;
+import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -19,14 +21,14 @@ public class CMDshow implements CommandExecutor{
 				if(p.hasPermission("build.team")){
 					if(args.length == 0) {
 						if (p.hasPermission("build.admin")) {
-							p.setPlayerListName("§4Admin §8» §7" + p.getName());
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7You are now §3unvanished");
+							p.setPlayerListName("Â§4Admin Â§8Â§ Â§7" + p.getName());
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7You are now Â§3unvanished");
 							for (Player all : Bukkit.getOnlinePlayers()) {
 								all.showPlayer(p);
 							}
 						} else if (p.hasPermission("build.team")) {
-							p.setPlayerListName("§eBuilder §8» §7" + p.getName());
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7You are now §3unvanished");
+							p.setPlayerListName("Â§eBuilder Â§8Â§ Â§7" + p.getName());
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7You are now Â§3unvanished");
 							for (Player all : Bukkit.getOnlinePlayers()) {
 								all.showPlayer(p);
 							}
@@ -36,36 +38,37 @@ public class CMDshow implements CommandExecutor{
 						if(p.hasPermission("build.admin")) {
 						Player target = Bukkit.getPlayer(args[0]);
 						if(target != null){
+							
 							if(target.hasPermission("build.admin")) {
-								target.setPlayerListName("§4Admin §8» §7" + target.getName());
+								target.setPlayerListName("Â§4Admin Â§8Â§ Â§7" + target.getName());
 								for (Player all : Bukkit.getOnlinePlayers()) {
 									all.showPlayer(target);
 									
 								}	
 							} else if (target.hasPermission("build.team")){
-								target.setPlayerListName("§eBuilder §8» §7" + target.getName());
+								target.setPlayerListName("Â§eBuilder Â§8Â§ Â§7" + target.getName());
 								for (Player all : Bukkit.getOnlinePlayers()) {
 									all.showPlayer(target);
 									
 								}
 							} else {
-								target.setPlayerListName("§7Spec §8» §7" + target.getName());
+								target.setPlayerListName("Â§7Spec Â§8Â§ Â§7" + target.getName());
 								for (Player all : Bukkit.getOnlinePlayers()) {
 									all.showPlayer(target);
 									
 								}
 							}
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7The Player §e" + target.getName() + " §7is §3vanished §7now");
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7The Player Â§e" + target.getName() + " Â§7is Â§3vanished Â§7now");
 							
 						} else
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cThe Player §e" + args[0] + " §ccould not be found");
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cThe Player Â§e" + args[0] + " Â§ccould not be found");
 						} else
-							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cInsufficiend permissions!");
+							p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cInsufficiend permissions!");
 					} else
-						p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §7Use §9/show <Player>§7!");
+						p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§7Use Â§9/show <Player>Â§7!");
 					
 				} else {
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " §8| §cInsufficiend permissions!");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " Â§8| Â§cInsufficiend permissions!");
 				}
 				
 			}

@@ -17,46 +17,46 @@ public class CMDhelp implements CommandExecutor{
 		if(cmd.getName().equalsIgnoreCase("help") || cmd.getName().equalsIgnoreCase("hilfe") || cmd.getName().equalsIgnoreCase("?")) {
 			if (sender instanceof Player) {
 				if (p.hasPermission("build.admin")) {
-					p.sendMessage("ง7");
-					p.sendMessage("ง7");
-					p.sendMessage("ง7");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7-x-x-x-x-x-งaHelpง7-x-x-x-x-x-x-");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7You are a ง4Administratorง7,");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Commands:");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง9/build ง8ป ง7GM1 shortcut");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง9/jumpto [Player] ง8ป ง7Warp to a Player");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง9/hide [Player] ง8ป ง7Vanish yourself or others");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง9/show [Player] ง8ป ง7Unvanish yourself or others");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7-x-x-x-x-x-งaHelpง7-x-x-x-x-x-x-");
-					p.sendMessage("ง7");
+					p.sendMessage("ยง7");
+					p.sendMessage("ยง7");
+					p.sendMessage("ยง7");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7-x-x-x-x-x-ยงaHelpยง7-x-x-x-x-x-x-");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7You are a ยง4Administratorยง7,");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Commands:");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง9/build ยง8ยง ยง7GM1 shortcut");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง9/jumpto [Player] ยง8ยง ยง7Warp to a Player");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง9/hide [Player] ยง8ยง ยง7Vanish yourself or others");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง9/show [Player] ยง8ยง ยง7Unvanish yourself or others");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7-x-x-x-x-x-ยงaHelpยง7-x-x-x-x-x-x-");
+					p.sendMessage("ยง7");
 				}else if (p.hasPermission("build.team")) {
-					p.sendMessage("ง7");
-					p.sendMessage("ง7");
-					p.sendMessage("ง7");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7-x-x-x-x-x-งaHelpง7-x-x-x-x-x-x-");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7You are a ง4Administratorง7,");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Commands:");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง9/build ง8ป ง7GM1 shortcut");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง9/jumpto [Player] ง8ป ง7Warp to a Player");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง9/hide ง8ป ง7Vanish yourself or others");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง9/show ง8ป ง7Unvanish yourself or others");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7-x-x-x-x-x-งaHelpง7-x-x-x-x-x-x-");
-					p.sendMessage("ง7");
+					p.sendMessage("ยง7");
+					p.sendMessage("ยง7");
+					p.sendMessage("ยง7");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7-x-x-x-x-x-ยงaHelpยง7-x-x-x-x-x-x-");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7You are a ยง4Administratorยง7,");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Commands:");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง9/build ยง8ยง ยง7GM1 shortcut");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง9/jumpto [Player] ยง8ยง ยง7Warp to a Player");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง9/hide ยง8ยง ยง7Vanish yourself or others");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง9/show ยง8ยง ยง7Unvanish yourself or others");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7-x-x-x-x-x-ยงaHelpยง7-x-x-x-x-x-x-");
+					p.sendMessage("ยง7");
 				} else {
-					p.sendMessage("ง7");
-					p.sendMessage("ง7");
-					p.sendMessage("ง7");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7-x-x-x-x-x-งaHelpง7-x-x-x-x-x-x-");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7On the ง9Buildserver ง7 only งeBuilders");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7can build. As a งaVisitor");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7you can only spectate.");
-					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7-x-x-x-x-x-งaHelpง7-x-x-x-x-x-x-");
-					p.sendMessage("ง7");
+					p.sendMessage("ยง7");
+					p.sendMessage("ยง7");
+					p.sendMessage("ยง7");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7-x-x-x-x-x-ยงaHelpยง7-x-x-x-x-x-x-");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7On the ยง9Buildserver ยง7 only ยงeBuilders");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7can build. As a ยงaVisitor");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7you can only spectate.");
+					p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7-x-x-x-x-x-ยงaHelpยง7-x-x-x-x-x-x-");
+					p.sendMessage("ยง7");
 				}
 			}
 			
 		} else {
-			p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix")) + " ง8| ง7Use ง9/help ง7!");
+			p.sendMessage(ChatColor.translateAlternateColorCodes ('&', Main.getInstance().getConfig().getString("Buildsystem.Prefix.System")) + " ยง8| ยง7Use ยง9/help ยง7!");
 		}
 		return false;
 		
