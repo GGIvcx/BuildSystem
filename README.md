@@ -1,8 +1,8 @@
 ![Title](https://cdn.modrinth.com/data/cached_images/bc5ecaf1f0f0826863a766f9c8e595709e5f10f9.png)
 # What does the Plugin do?
 This simple plugin is designed to manage builders and visitors on your build server. At its core, it gives builders and admins creativemode, while other visitors are immediately placed in spectatormode to protect the builds.\
-# Supportet Versions
-- Spigot 1.21.1
+# Supportet Versions by current repo
+- Spigot/Bukkit/Paper 1.21.8
 
 ## Features
 - Adds a simple vanish for staffmembers
@@ -69,3 +69,4 @@ Buildsystem:
 ## Some notes
 I originally wrote this plugin for a friend, and to make sure it doesn't get lost, I want to share it here.
 This is one of my first attempts at making a plugin, so feedback is appreciated! Since this is one of my first plugins, the code is certainly not perfect. I will clean it up and optimize it more and more over time.
+
